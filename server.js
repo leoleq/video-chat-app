@@ -55,12 +55,14 @@ io.on("connection", function (socket) {
   //Triggered when server gets an offer from a peer in the room.
 
   socket.on("offer", function (offer, roomName) {
+    console.log('offer', offer, roomName);
     socket.broadcast.to(roomName).emit("offer", offer); //Sends Offer to the other peer in the room.
   });
 
   //Triggered when server gets an answer from a peer in the room.
 
   socket.on("answer", function (answer, roomName) {
+    console.log('answer',answer, roomName);
     socket.broadcast.to(roomName).emit("answer", answer); //Sends Answer to the other peer in the room.
   });
 });
