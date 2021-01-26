@@ -21,7 +21,7 @@ let iceServers = {
     {urls: "stun:stun.services.mozilla.com"},
     {urls: "stun:stun1.l.google.com:19302"},
     ],
-}; 
+};  
 
 joinButton.addEventListener("click", function () {
   if (roomInput.value == "") {
