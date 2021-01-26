@@ -13,10 +13,15 @@ let userStream;
 // Contains the stun server URL we will be using.
 let iceServers = {
   iceServers: [
-    { urls: "stun:stun.services.mozilla.com" },
-    { urls: "stun:stun.l.google.com:19302" },
-  ],
-};
+    {
+     urls: 'turn:numb.viagenie.ca:3489',
+     credential: 'LeqNUMB',
+     username: 'llequini@hotmail.com'
+    },
+    {urls: "stun:stun.services.mozilla.com"},
+    {urls: "stun:stun1.l.google.com:19302"},
+    ],
+}; 
 
 joinButton.addEventListener("click", function () {
   if (roomInput.value == "") {
